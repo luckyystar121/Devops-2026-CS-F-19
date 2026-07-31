@@ -1,0 +1,309 @@
+/* =====================================================
+   MyProductsDashboard — Light Sidebar, Fixed Layout
+   ===================================================== */
+
+/* Page container */
+.mpd-page {
+  /* No max-width restriction — sidebar is fixed, content fills rest */
+}
+
+/* ---- TOPBAR (mobile only) ---- */
+.mpd-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 10px 16px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.mpd-topbar-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #1e293b;
+}
+
+.mpd-menu-btn {
+  border-radius: 10px !important;
+  font-weight: 600;
+}
+
+/* ---- LAYOUT: sidebar is fixed, content scrolls independently ---- */
+.mpd-layout {
+  display: block;
+  min-height: 100vh;
+}
+
+/* =====================================================
+   FIXED SIDEBAR
+   ===================================================== */
+.mpd-sidebar {
+  position: fixed;
+  left: 0;
+  top: 64px;            /* sits below the navbar */
+  width: 260px;
+  height: calc(100vh - 64px);
+  background: #ffffff;
+  border: none;
+  border-right: 1px solid #e2e8f0;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.06);
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 200;
+  padding: 0;
+}
+
+/* Thin scrollbar */
+.mpd-sidebar::-webkit-scrollbar { width: 4px; }
+.mpd-sidebar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+
+.mpd-sidebar-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 20px 18px 14px;
+  border-bottom: 1px solid #f1f5f9;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #E3F2FD 0%, #EDE7F6 100%);
+}
+
+.mpd-sidebar-title {
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #1e293b;
+  letter-spacing: -0.01em;
+}
+
+.mpd-sidebar-header .text-muted {
+  color: #64748b !important;
+  font-size: 0.8rem;
+}
+
+/* ---- NAV ---- */
+.mpd-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 10px;
+}
+
+/* Section label (non-clickable heading) */
+.mpd-group {
+  width: 100%;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 12px 4px;
+  border-radius: 0;
+  color: #94a3b8;
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: default;
+  pointer-events: none;
+}
+
+.mpd-group:hover  { background: transparent; color: #94a3b8; }
+.mpd-group.expanded { background: transparent; color: #94a3b8; }
+
+.mpd-group-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Sub-nav always visible */
+.mpd-subnav {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 0 6px;
+  margin-bottom: 6px;
+}
+
+/* Individual nav items */
+.mpd-item {
+  width: 100%;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 9px 14px;
+  border-radius: 8px;
+  color: #475569;
+  font-weight: 500;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.mpd-item:hover {
+  background: #f1f5f9;
+  color: #0d6efd;
+}
+
+.mpd-item.active {
+  background: #eff6ff;
+  color: #0d6efd;
+  font-weight: 700;
+  box-shadow: inset 3px 0 0 #0d6efd;
+}
+
+/* =====================================================
+   CONTENT AREA — pushed right of the fixed sidebar
+   ===================================================== */
+.mpd-content {
+  margin-left: 260px;          /* exactly sidebar width */
+  padding: 32px 40px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.mpd-content-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e8edf4;
+}
+
+.mpd-h1 {
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.mpd-h2 {
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: #94a3b8;
+}
+
+/* ---- PRODUCT CARDS ---- */
+.mpd-card {
+  border-radius: 16px !important;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  border: 1px solid #e8edf4 !important;
+}
+
+.mpd-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1) !important;
+}
+
+.mpd-card-img {
+  height: 210px;
+  object-fit: cover !important;
+  background: #f1f5f9;
+}
+
+.mp-card .card-img-top {
+  height: 190px;
+  object-fit: cover !important;
+  background: #f1f5f9;
+}
+
+.mpd-sold-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 0.76rem;
+  box-shadow: 0 4px 12px rgba(239,68,68,0.4);
+  z-index: 2;
+  letter-spacing: 0.08rem;
+}
+
+/* ---- INLINE TABS ---- */
+.mpd-inline-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.mpd-inline-tab {
+  border: 1.5px solid #e2e8f0;
+  background: #fff;
+  color: #334155;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 0.87rem;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+
+.mpd-inline-tab:hover {
+  border-color: #93c5fd;
+  background: #f0f9ff;
+  color: #0d6efd;
+}
+
+.mpd-inline-tab.active {
+  border-color: #0d6efd;
+  background: #eff6ff;
+  color: #0d6efd;
+  box-shadow: 0 2px 8px rgba(13,110,253,0.15);
+}
+
+/* =====================================================
+   MOBILE — sidebar becomes overlay
+   ===================================================== */
+@media (max-width: 991.98px) {
+  .mpd-sidebar {
+    display: none;
+    top: 0;
+    height: 100dvh;
+    width: 270px;
+    z-index: 1060;
+    box-shadow: 4px 0 24px rgba(0,0,0,0.15);
+  }
+
+  .mpd-layout.sidebar-open::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(15,23,42,0.5);
+    z-index: 1055;
+    backdrop-filter: blur(2px);
+  }
+
+  .mpd-layout.sidebar-open .mpd-sidebar {
+    display: block;
+  }
+
+  /* Content fills full width on mobile */
+  .mpd-content {
+    margin-left: 0;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .mpd-card-img,
+  .mp-card .card-img-top { height: 170px; }
+
+  .mpd-content-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .mpd-h1 { font-size: 1.1rem; }
+}
