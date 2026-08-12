@@ -1,0 +1,62 @@
+/* ===================== PAGE ===================== */
+.my-profile-page {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* ===================== CARD ===================== */
+.my-profile-page .card {
+    border-radius: 20px !important;
+    border: 1px solid #e8edf4 !important;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07) !important;
+}
+
+/* ===================== AVATAR ===================== */
+.profile-avatar {
+    width: 88px;
+    height: 88px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.35);
+}
+
+/* ===================== READ-ONLY FIELDS ===================== */
+.form-control[readonly],
+.form-select:disabled {
+    background-color: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    color: #64748b;
+    cursor: default;
+}
+
+.form-control:not([readonly]),
+.form-select:not(:disabled) {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+/* ===================== MOBILE ===================== */
+@media (max-width: 575.98px) {
+    .my-profile-page {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .my-profile-page .card {
+        padding: 1.25rem !important;
+        border-radius: 16px !important;
+    }
+
+    .profile-avatar {
+        width: 76px;
+        height: 76px;
+        font-size: 1.75rem;
+    }
+}
