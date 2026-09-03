@@ -6,12 +6,12 @@ CampusCart is a student-focused marketplace designed to make buying and selling 
 
 ## Tech Stack
 
-**Frontend:** React.js, JavaScript, HTML, CSS
-**Backend:** Node.js, Express.js
-**Database:** MongoDB
-**Authentication:** JWT
-**Cloud Services:** Cloudinary
-**Development & Collaboration:** Git, GitHub, VS Code
+**Frontend:** React.js, JavaScript, HTML, CSS <br>
+**Backend:** Node.js, Express.js <br>
+**Database:** MongoDB <br>
+**Authentication:** JWT <br>
+**Cloud Services:** Cloudinary <br>
+**Development & Collaboration:** Git, GitHub, VS Code <br>
 
 ## Folder Structure
 
