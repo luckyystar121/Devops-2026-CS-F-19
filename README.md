@@ -6,14 +6,20 @@ CampusCart is a student-focused marketplace designed to make buying and selling 
 
 ## Tech Stack
 
+The project is divided into two main parts: client and server. <br>
+The client contains everything related to the frontend and what the user sees and interacts with. <br> <br>
 **Frontend:** React.js, JavaScript, HTML, CSS <br>
+
+The server handles the backend side of the application. It manages the API routes, business logic, authentication, database operations, and communication with external services.<br> <br>
 **Backend:** Node.js, Express.js <br>
 **Database:** MongoDB <br>
 **Authentication:** JWT <br>
 **Cloud Services:** Cloudinary <br>
 **Development & Collaboration:** Git, GitHub, VS Code <br>
 
-## Folder Structure
+Keeping the client and server separate makes the project easier to develop, maintain, and update as the application grows.
+
+## Structure And Getting started
 
 ```bash
 CampusCart/
@@ -39,6 +45,25 @@ CampusCart/
 └── package.json
 ```
 
+Clone the repository and move into the project folder:
+```
+git clone https://github.com/shreyasaxena121/Devops-2026-CS-F-19.git
+cd Devops-2026-CS-F-19
+```
+
+The backend requires environment variables for things such as the MongoDB connection, JWT secret, Cloudinary configuration, and other API keys used by the application. 
+<br> Create a .env file inside the server folder and add the required values.
+<br>Once everything is configured, start the backend:
+```
+cd server
+npm run dev
+```
+Then open another terminal, start the frontend, and visit the local URL shown by Vite:
+```
+cd client
+npm run dev
+```
+  
 ## Future Scope
 
 We could add features such as <br>
