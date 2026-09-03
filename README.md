@@ -2,7 +2,7 @@
 
 ## Overview
 
-CampusCart is a student-focused marketplace designed to make buying and selling within a college community easier. Students often rely on WhatsApp groups, Instagram pages, or word of mouth to sell old  items, which can make it difficult to find the right thing at the right time. CampusCart brings these listings into one place so students can browse, post, and manage items more conveniently.
+CampusCart is a student-focused marketplace designed to make buying and selling within a college community easier. <br><br> Students often rely on WhatsApp groups, Instagram pages, or word of mouth to sell old  items, which can make it difficult to find the right thing at the right time. <br><br>CampusCart brings these listings into one place so students can browse, post, and manage items more conveniently.
 
 ## Tech Stack
 
